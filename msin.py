@@ -34,16 +34,19 @@ while not quitGame:
         if button1 and mouseDown:
             state = 2
         elif button2 and mouseDown:
-            state = 2
-        elif button3 and mouseDown:
             state = 3
+        elif button3 and mouseDown:
+            state = 4
 
     if state == 2:
         screen.fill((80, 200, 100))
         pygame.draw.rect(screen, (100, 230, 100), (100, 400, 200, 150))
     elif state == 3:
-        screen.fill((100, 150, 200))
+        screen.fill((50, 197, 200))
         pygame.draw.rect(screen, (100, 230, 100), (400, 400, 200, 150))
+    elif state == 4:
+        screen.fill((100, 150, 200))
+        pygame.draw.rect(screen, (100, 230, 100), (700, 400, 200, 150))
     else:
         screen.fill((230, 100, 100))
         pygame.draw.rect(screen, (100, 230, 100) if not button1 else (200, 230, 200), (100, 400, 200, 150))
