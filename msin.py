@@ -24,7 +24,7 @@ while not quitGame:
             mouseDown = False
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_q:
-                state = 1 # Return to menu when 'q' is pressed
+                state = 1  # Return to menu when 'q' is pressed
 
     if state == 1:
         button1 = 100 < mousePos[0] < 300 and 400 < mousePos[1] < 550
@@ -49,9 +49,21 @@ while not quitGame:
         pygame.draw.rect(screen, (100, 230, 100), (700, 400, 200, 150))
     else:
         screen.fill((230, 100, 100))
-        pygame.draw.rect(screen, (100, 230, 100) if not button1 else (200, 230, 200), (100, 400, 200, 150))
-        pygame.draw.rect(screen, (100, 230, 100) if not button2 else (200, 230, 200), (400, 400, 200, 150))
-        pygame.draw.rect(screen, (100, 230, 100) if not button3 else (200, 230, 200), (700, 400, 200, 150))
+        pygame.draw.rect(
+            screen,
+            (100, 230, 100) if not button1 else (200, 230, 200),
+            (100, 400, 200, 150),
+        )
+        pygame.draw.rect(
+            screen,
+            (100, 230, 100) if not button2 else (200, 230, 200),
+            (400, 400, 200, 150),
+        )
+        pygame.draw.rect(
+            screen,
+            (100, 230, 100) if not button3 else (200, 230, 200),
+            (700, 400, 200, 150),
+        )
 
     pygame.display.flip()
 
